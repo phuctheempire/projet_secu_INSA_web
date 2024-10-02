@@ -12,3 +12,7 @@ Tout se compose dans le fichier `docker-compose.yml`.
 Pour installer: `docker-compose up -d`
 
 *Vous me dit si vous avez besoin plus comment configurer le serveur*
+
+Pour lancer: Ouvrez le browser
+- `localhost` pour le site web
+- `localhost:8080` pour phpmyadmin ( user: `user`, password: `test` )
