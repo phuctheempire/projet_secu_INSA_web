@@ -1,0 +1,19 @@
+-Garder ou améliorer contexte
+-Critère de points: Vitesse et correction de failles
+-1ère idée: Après les 24h, lors de la séance de gestion de crise si au bout d'un certain temps (40min-1h) envoyer un mail à l'equipe pour aider à trouver fichiers cachés
+-Déterminer la structure de notre site test(quelle pages on programme) sue Excalidraw, beaucoup d'idée sympa.
+-Déterminer les failles qu'on peut implémenter sur le site test:
+  --> XSS
+  --> SQL
+  --> CSRF
+  --> bruteforce / Pour réaliser cette étape, il faut qu'on hache les mots de passe
+  --> DDOS (WTF!!?)
+  --> Directory traversal / Il faut utiliser un outil comme gobuster pour trouver les répertoires cachés
+  --> cheval de Troie (à étudier) / Godzilla
+- On prend site de Delong et il faut continuer le développement
+-Rôles spécialisé:
+--> Phuc plus dans le développement du site
+--> Yoann et Delong plus dans la sécurité
+--> Mohamed tu prefères développement web ou sécurité ?
+ 
+
