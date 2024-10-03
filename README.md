@@ -16,3 +16,6 @@ Pour installer: `docker-compose up -d`
 Pour lancer: Ouvrez le browser
 - `localhost` pour le site web
 - `localhost:8080` pour phpmyadmin ( user: `user`, password: `test` )
+
+## Structure du site:
+![](assets/images/web.png)
