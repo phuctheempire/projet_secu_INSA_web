@@ -3,8 +3,7 @@ services:
     php:
         build: .
         ports: 
-            - "80:80"
-            - "443:443"
+            - "2024:80"
         volumes:
             - ./www:/var/www/html/ # syncronize the local folder with the container folder
         links:
@@ -31,9 +30,9 @@ services:
             - db:db
         ports:
             - 8000:80
-        environment:
-            MYSQL_USER: user
-            MYSQL_PASSWORD: test
-            MYSQL_ROOT_PASSWORD: test
+        # environment:
+        #     MYSQL_USER: user
+        #     MYSQL_PASSWORD: test
+        #     MYSQL_ROOT_PASSWORD: test
 volumes:
     persistent:
