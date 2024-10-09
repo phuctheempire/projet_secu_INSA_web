@@ -135,6 +135,12 @@ h1, h2, h3, h4, h5, h6 { color: #444; font-family: 'Averia Serif Libre', cursive
     padding: 20px; /* Add some padding around the content */
     border-radius: 8px; /* Rounded corners for the container */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
+    
+    min-height: 100vh; /* Ensure the container takes up at least 100% of the viewport height */
+    width: 100vw; /* Ensure the container takes up the full viewport width */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items:baseline ;  /* Center content vertically */
 }
 
 /* Form container styles */
@@ -153,6 +159,8 @@ h1, h2, h3, h4, h5, h6 { color: #444; font-family: 'Averia Serif Libre', cursive
     transform: scale(1.02); /* Slightly enlarge the form on hover */
 }
 
+
+
 /* Title styles */
 .form-title {
     text-align: center; /* Center the title */
@@ -164,7 +172,7 @@ h1, h2, h3, h4, h5, h6 { color: #444; font-family: 'Averia Serif Libre', cursive
 
 /* Group styles */
 .form-group {
-    margin-bottom: 20px; /* Space between groups */
+    margin-bottom: 30px; /* Space between groups */
 }
 
 /* Input and select styles */
@@ -257,3 +265,99 @@ label {
 #login-form:hover {
     transform: scale(1.02); /* Slight zoom effect on hover */
 }
+
+.btn-modify {
+    display: inline-block;
+    margin-top: 20px; /* Space above the button */
+    padding: 10px 20px; /* Vertical and horizontal padding */
+    font-size: 16px; /* Font size */
+    color: #fff; /* Text color */
+    background-color: #007bff; /* Bootstrap primary color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+.btn-modify:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+.user-image {
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    margin-bottom: 20px;
+}
+.card {
+    width: 80%; /* Cover nearly all the container */
+    /* max-width: 600px; */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow for effect */
+    font-family: Arial, sans-serif;
+
+    margin-top: 0; /* Remove top margin */
+    position: relative; /* Normal flow to maintain padding inside container */
+
+}
+
+/* Styling for the user image */
+.user-image img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/* Styling for the user name */
+.user-fullname {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center; /* Center the name */
+}
+
+/* Styling for user-info */
+.user-info {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Displaying user-info items in two columns */
+.user-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.user-info p {
+    flex: 1; /* Make each item take equal space */
+}
+
+.card h1 {
+    margin-bottom: 30px; /* Space below the heading */
+}
+
+/* Make the entire text more readable */
+h2, p {
+    color: #555;
+}
+
+/* Add a hover effect for the card */
+.card:hover {
+    transform: translateY(-5px); /* Slight elevation */
+    transition: transform 0.3s ease;
+}
+
+.page-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px; /* Space between title and other content */
+}
+

@@ -24,7 +24,7 @@ if (isset($_POST['login_btn'])) {
             $reg_user_id = mysqli_fetch_assoc($result)['id'];
             // die();
             // put logged in user into session array
-            $_SESSION['user'] = getUserById($reg_user_id);
+            $_SESSION['user_id'] = $reg_user_id;
             // if user is admin, redirect to admin area
 
             $_SESSION['message'] = "You are now logged in";

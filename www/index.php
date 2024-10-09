@@ -30,7 +30,7 @@ include "components".DS."header.php";
     echo "</table>";
     // echo $_SESSION['user_id'];
     // $result->close();
-    var_dump($_SESSION['user']);
+    // var_dump($_SESSION['user_id']);
     mysqli_close($conn);
 
     ?>
