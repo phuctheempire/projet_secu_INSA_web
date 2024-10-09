@@ -13,12 +13,12 @@ require ROOT_PATH . DS . "components" . DS . "nav_bar.php";
         
         <div class="form-group">
             <label for="nom">Full Name:</label>
-            <input class="form-input" type="text" id="fullname" name="fullname" placeholder="Enter your full name" value="<?php echo $user_info["nom"] ?>" required>
+            <input class="form-input" type="text" id="nom" name="nom" placeholder="Enter your full name" value="<?php echo $user_info["nom"] ?>" required>
         </div>
 
         <div class="form-group">
             <label for="prenom">First Name:</label>
-            <input class="form-input" type="text" id="firstname" name="firstname" placeholder="Enter your first name" value="<?php echo $user_info["prenom"] ?>" required>
+            <input class="form-input" type="text" id="prenom" name="prenom" placeholder="Enter your first name" value="<?php echo $user_info["prenom"] ?>" required>
         </div>
         
         <div class="form-group">
@@ -33,27 +33,25 @@ require ROOT_PATH . DS . "components" . DS . "nav_bar.php";
 
         <div class="form-group">
             <label for="gender">Gender:</label>
-            <select class="form-select" id="gender" name="gender" required>
-                <option value="<?php echo $user_info["sexe"] ?>" disabled selected><?php echo $user_info["sexe"] ?></option>
+            <select class="form-select" id="sexe" name="sexe" required>
                 <option value="M">Male</option>
                 <option value="F">Female</option>
-                <option value="O">Other</option>
             </select>
         </div>
 
         <div class="form-group">
-            <label for="birthdate">Date of Birth:</label>
-            <input class="form-input" type="date" id="birthdate" name="birthdate" value="<?php echo $user_info["date_naissance"] ?>" required>
+            <label for="date_naissance">Date of Birth:</label>
+            <input class="form-input" type="date" id="date_naissance" name="date_naissance" value="<?php echo $user_info["date_naissance"] ?>" required>
         </div>
 
         <div class="form-group">
-            <label for="address">Address:</label>
-            <input class="form-input" type="text" id="address" name="address" placeholder="Enter your address" value="<?php echo $user_info["adresse"] ?>" required>
+            <label for="adressse">Address:</label>
+            <input class="form-input" type="text" id="adresse" name="adresse" placeholder="Enter your address" value="<?php echo $user_info["adresse"] ?>" required>
         </div>
 
         <div class="form-group">
-            <label for="phone">Phone:</label>
-            <input class="form-input" type="tel" id="phone" name="phone" placeholder="Enter your phone number" value="<?php echo $user_info["telephone"] ?>" required>
+            <label for="telephone">Phone:</label>
+            <input class="form-input" type="tel" id="telephone" name="telephone" placeholder="Enter your phone number" value="<?php echo $user_info["telephone"] ?>" required>
         </div>
         <?php if ($user_info["role"] == "Student") { ?>
         <div class="form-group">
@@ -83,7 +81,7 @@ require ROOT_PATH . DS . "components" . DS . "nav_bar.php";
         <?php } elseif ($user_info["role"] == "Teacher") {?>
             <p class="user-info" id="user-departement">Department: <?php echo $user_info["departement"] ?></p>
         <?php } else {} ?>   
-        <button type="submit" class="form-button">Submit Changes</button>
+        <button type="submit" name="change-info" class="form-button">Submit Changes</button>
     </form>
     </div>
     

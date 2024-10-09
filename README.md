@@ -250,9 +250,6 @@ END //
 DELIMITER ;
 
 
-
-
-
 ```
     
 ```sql
@@ -304,3 +301,6 @@ CALL init_groupes();
 CALL insert_matiere('Securite Systeme');
 CALL insert_matiere('Java');
 CALL insert_matiere('Programmation Web');
+
+
+```

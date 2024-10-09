@@ -37,3 +37,33 @@ if (isset($_SESSION['user_id'])) {
 } else {
     header('location: /pages/public/login.php');
 }
+
+if(isset($_POST['change-info'])){
+    $nom = ($_POST['nom']);
+    $prenom = ($_POST['prenom']);
+    // $email = ($_POST['email']);
+    $sexe = ($_POST['sexe']);
+    $date_naissance = ($_POST['date_naissance']);
+    $adresse = ($_POST['adresse']);
+    $telephone = ($_POST['telephone']);
+
+
+    // Validate form inputs
+
+    // Check if username or email already exists
+    $sql = "UPDATE Users SET nom = '$nom', prenom = '$prenom', sexe = '$sexe', date_naissance = '$date_naissance', adresse = '$adresse', telephone = '$telephone' WHERE id = $user_id;";
+    $result = mysqli_query($conn, $sql);
+    if ($result) {
+            $_SESSION['message'] = "User info updated successfully";
+            header('location: /pages/user/user_page.php');
+            exit();
+    } else {
+        // array_push($errors, "Failed to update user info");
+    }
+
+}
+    
+
+    // If no errors, register user
+
+?>
