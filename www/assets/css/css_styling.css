@@ -135,7 +135,6 @@ h1, h2, h3, h4, h5, h6 { color: #444; font-family: 'Averia Serif Libre', cursive
     padding: 20px; /* Add some padding around the content */
     border-radius: 8px; /* Rounded corners for the container */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
-    
     min-height: 100vh; /* Ensure the container takes up at least 100% of the viewport height */
     width: 100vw; /* Ensure the container takes up the full viewport width */
     display: flex;
