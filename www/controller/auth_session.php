@@ -14,7 +14,6 @@ if (isset($_POST['login_btn'])) {
         array_push($errors, "Password required");
     }
     if (empty($errors)) {
-        $password = md5($password); // encrypt password
         $sql = "CALL login('$email', '$password')";
         $result = mysqli_query($conn, $sql);
         // var_dump($result);
@@ -26,10 +25,8 @@ if (isset($_POST['login_btn'])) {
             // put logged in user into session array
             $_SESSION['user_id'] = $reg_user_id;
             // if user is admin, redirect to admin area
-
-            $_SESSION['message'] = "You are now logged in";
             // redirect to public area
-            header('location: /index.php');
+            header('location: /pages/user/user_page.php?id='.urlencode($reg_user_id));
             exit(0);
         } else {
             array_push($errors, 'Wrong credentials');

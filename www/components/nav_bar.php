@@ -11,7 +11,7 @@
         <?php 
             if ( isset($_SESSION['user_id'])){
             ?>  
-                <div class="nav_button"><a href="/pages/user/user_page.php">Gestion de compte</a></div>
+                <div class="nav_button"><a href="/pages/user/user_page.php?id=<?php echo $_SESSION["user_id"];?>">Gestion de compte</a></div>
                 <div class="nav_button"><a href="/controller/sess_destroy.php">Logout</a></div>
             <?php
             }

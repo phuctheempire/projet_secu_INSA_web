@@ -1,7 +1,7 @@
 <?php
 if (isset($_SESSION['user_id'])) {
     $conn = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
-    $user_id = $_SESSION['user_id'];
+    $user_id = $_GET['id'];
     // var_dump($user_id);
     $query = "SELECT nom, prenom, email, sexe, date_naissance, adresse, telephone, image_path, role From Users WHERE id = $user_id LIMIT 1";
     $result = mysqli_query($conn, $query);
