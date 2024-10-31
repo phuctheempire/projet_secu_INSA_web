@@ -116,6 +116,7 @@ CREATE TABLE IF NOT EXISTS Documents(
     mattier_id INT,
     title VARCHAR(255) NOT NULL,
     name VARCHAR(255) NOT NULL,
+    date DATE NOT NULL,
     section ENUM("Cours", "TD", "TP", "Examen", "Correction"),
     FOREIGN KEY (author_id) REFERENCES Users(id),
     FOREIGN KEY (mattier_id) REFERENCES Matiere(matier_id),

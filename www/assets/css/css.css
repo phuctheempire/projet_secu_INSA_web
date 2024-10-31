@@ -1,6 +1,6 @@
 * { margin: 0px; padding: 0px; }
 
-html { height: 100%; box-sizing: border-box; }
+/* html { height: 100%; box-sizing: border-box; } */
 
 body {
     background-image: url('https://www.groupe-insa.fr/sites/default/files/uploads/images/batiment-Bourges_0.jpg'); /* Path to your background image */
@@ -11,7 +11,6 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 { color: #444; font-family: 'Averia Serif Libre', cursive; }
-
 
 
 
@@ -31,6 +30,7 @@ h1, h2, h3, h4, h5, h6 { color: #444; font-family: 'Averia Serif Libre', cursive
     align-items: center; /* Center items vertically */
     background-color: #333; /* Dark grey */
     padding: 10px 20px;
+    /* width: 100vw; */
     font-family: 'Roboto', sans-serif;
 }
 
@@ -91,25 +91,25 @@ h1, h2, h3, h4, h5, h6 { color: #444; font-family: 'Averia Serif Libre', cursive
         flex-direction: column; /* Stack items vertically on small screens */
         padding: 5px 10px; /* Adjust padding for mobile */
     }
-
+    
     #nav-left {
         width: 100%; /* Ensure left container takes full width */
         justify-content: flex-start; /* Align items to the left */
     }
-
+    
     #nav-center {
         flex-direction: column; /* Stack center buttons vertically */
         gap: 10px; /* Reduced gap for mobile */
         width: 100%; /* Full width on mobile */
     }
-
+    
     .nav_button a {
         padding: 10px; /* Adjust padding for mobile */
         font-size: 16px; /* Smaller font on mobile */
         width: 100%; /* Full width for each button */
         text-align: center; /* Center text */
     }
-
+    
     #nav-right {
         flex-direction: column; /* Stack right links vertically */
         gap: 10px; /* Reduced gap for mobile */
@@ -122,7 +122,7 @@ h1, h2, h3, h4, h5, h6 { color: #444; font-family: 'Averia Serif Libre', cursive
     #navbar {
         padding: 5px; /* Further reduce padding for very small screens */
     }
-
+    
     .nav_button a {
         font-size: 14px; /* Even smaller font size for very small screens */
     }
@@ -136,10 +136,10 @@ h1, h2, h3, h4, h5, h6 { color: #444; font-family: 'Averia Serif Libre', cursive
     border-radius: 8px; /* Rounded corners for the container */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
     min-height: 100vh; /* Ensure the container takes up at least 100% of the viewport height */
-    width: 100vw; /* Ensure the container takes up the full viewport width */
-    display: flex;
+    /* width: 100vw; Ensure the container takes up the full viewport width */
+    /* display: flex; */
     justify-content: center; /* Center content horizontally */
-    align-items:baseline ;  /* Center content vertically */
+    align-items: center ; /* Center content vertically */
 }
 
 /* Form container styles */
@@ -289,16 +289,13 @@ label {
 }
 .card {
     width: 80%; /* Cover nearly all the container */
-    /* max-width: 600px; */
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow for effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow  for effect */
     font-family: Arial, sans-serif;
-
-    margin-top: 0; /* Remove top margin */
+    margin: 20px auto; /* Center the card */
     position: relative; /* Normal flow to maintain padding inside container */
-
 }
 
 /* Styling for the user image */
@@ -360,3 +357,173 @@ h2, p {
     margin-bottom: 20px; /* Space between title and other content */
 }
 
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
+    gap: 50px; /* Space between the grid items */
+    max-width: 1200px; /* Optional: limit the max width of the grid */
+    margin: 20px auto; /* Centers the grid */
+}
+
+.course-item {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center-aligns the text */
+    font-family: Arial, sans-serif; /* Changes font family */
+}
+
+.course-item a {
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.course-item a:hover {
+    color: #4CAF50;
+}
+
+
+/* General styling */
+/* body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+} */
+
+/* General container styling
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+} */
+
+/* Annonce styling */
+/* .annonces, .documents {
+    width: 100%;
+    padding: 30px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+} */
+
+/* Annonce box styling */
+.annonce-box {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    background-color: #f1f1f1;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.annonce-box:hover {
+    background-color: #e9ecef;
+}
+
+.annonce-title {
+    font-size: 1.5em;
+    color: #0056b3;
+    margin: 0;
+}
+
+.annonce-content {
+    font-size: 1.1em;
+    color: #666;
+    margin: 10px 0;
+}
+
+.annonce-date {
+    font-size: 0.95em;
+    color: #999;
+    text-align: right;
+    margin-top: 15px;
+}
+
+/* Document section styling */
+.documents-title {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.document-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background-color: #f1f1f1;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.document-box:hover {
+    background-color: #e9ecef;
+}
+
+.document-title {
+    font-size: 1.3em;
+    color: #0056b3;
+    margin: 0;
+}
+
+.document-link {
+    font-size: 1.1em;
+    color: #0056b3;
+    text-decoration: none;
+    border-bottom: 1px dashed #0056b3;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.document-link:hover {
+    color: #003f7f;
+    border-bottom: 1px solid #003f7f;
+}
+
+#annonces-title {
+    font-size: 2.5em; /* Adjust as desired */
+    color: #0056b3; /* Optional: Match color with other titles */
+    margin: 0; /* Optional: Adjust margin as needed */
+}
+
+#comments-title {
+    font-size: 2.2em; /* Adjust for desired size */
+    color: #0056b3;
+    margin: 20px 0; /* Adds space around title */
+}
+
+.comment-box {
+    background-color: #f9f9f9; /* Light background for contrast */
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px; /* Space between comments */
+    border-radius: 5px; /* Optional: adds rounded corners */
+}
+
+.comment-content {
+    font-size: 1em;
+    color: #333; /* Dark color for readability */
+    margin: 0 0 10px 0; /* Space below content */
+}
+
+.comment-date {
+    font-size: 0.9em;
+    color: #999;
+    text-align: right;
+    margin-top: 5px;
+}

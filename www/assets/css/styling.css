@@ -1,0 +1,496 @@
+* { margin: 0px; padding: 0px; }
+
+/* html { height: 100%; box-sizing: border-box; } */
+
+body {
+    background-image: url('https://www.groupe-insa.fr/sites/default/files/uploads/images/batiment-Bourges_0.jpg'); /* Path to your background image */
+    background-size: cover; /* Cover the entire screen */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    color: #333; /* Default text color for readability */
+}
+
+h1, h2, h3, h4, h5, h6 { color: #444; font-family: 'Averia Serif Libre', cursive; }
+
+
+
+/* Navigation bar styling */
+
+/* Navigation Bar Styles */
+/* Navigation Bar Styles */
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Navigation Bar Styles */
+/* General settings for the navbar */
+/* General Navbar Styles */
+#navbar {
+    display: flex;
+    justify-content: space-between; /* Space between left and right sections */
+    align-items: center; /* Center items vertically */
+    background-color: #333; /* Dark grey */
+    padding: 10px 20px;
+    /* width: 100vw; */
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Left Navbar Container */
+#nav-left {
+    display: flex; /* Flexbox to align logo and center buttons */
+    align-items: center; /* Center items vertically */
+}
+
+/* Logo Styles */
+#navbar #a-link-header {
+    margin-right: 20px; /* Space between logo and center buttons */
+}
+
+#navbar #a-link-header img {
+    width: 200px; /* Set the desired width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Center Navbar Buttons */
+#nav-center {
+    display: flex; /* Use flex for center buttons */
+    gap: 20px; /* Space between center buttons */
+}
+
+/* Navbar Button Styles */
+.nav_button {
+    display: flex; /* Use flex to center content */
+    align-items: center; /* Center text vertically */
+}
+
+.nav_button a {
+    color: #fff; /* White text */
+    text-decoration: none;
+    padding: 10px 20px; /* Space around text */
+    font-size: 18px;
+    display: flex; /* Allows height to cover navbar */
+    align-items: center; /* Center text vertically */
+    height: 100%; /* Full height of navbar */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+/* Align Login and Register to the right */
+#nav-right {
+    display: flex; /* Flexbox for right links */
+    gap: 20px; /* Space between links */
+}
+
+/* Hover Effects */
+.nav_button a:hover {
+    background-color: #555; /* Slightly lighter grey on hover */
+    border-radius: 10px; /* Rounded corners on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #navbar {
+        flex-direction: column; /* Stack items vertically on small screens */
+        padding: 5px 10px; /* Adjust padding for mobile */
+    }
+    
+    #nav-left {
+        width: 100%; /* Ensure left container takes full width */
+        justify-content: flex-start; /* Align items to the left */
+    }
+    
+    #nav-center {
+        flex-direction: column; /* Stack center buttons vertically */
+        gap: 10px; /* Reduced gap for mobile */
+        width: 100%; /* Full width on mobile */
+    }
+    
+    .nav_button a {
+        padding: 10px; /* Adjust padding for mobile */
+        font-size: 16px; /* Smaller font on mobile */
+        width: 100%; /* Full width for each button */
+        text-align: center; /* Center text */
+    }
+    
+    #nav-right {
+        flex-direction: column; /* Stack right links vertically */
+        gap: 10px; /* Reduced gap for mobile */
+        width: 100%; /* Full width on mobile */
+    }
+}
+
+/* Optional: Collapse Menu for Mobile */
+@media (max-width: 480px) {
+    #navbar {
+        padding: 5px; /* Further reduce padding for very small screens */
+    }
+    
+    .nav_button a {
+        font-size: 14px; /* Even smaller font size for very small screens */
+    }
+}
+
+
+
+.container {
+    background-color: rgba(255, 255, 255, 0.8); /* White background with 80% opacity */
+    padding: 20px; /* Add some padding around the content */
+    border-radius: 8px; /* Rounded corners for the container */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
+    min-height: 100vh; /* Ensure the container takes up at least 100% of the viewport height */
+    /* width: 100vw; Ensure the container takes up the full viewport width */
+    /* display: flex; */
+    justify-content: center; /* Center content horizontally */
+    align-items: center ; /* Center content vertically */
+}
+
+/* Form container styles */
+#registration-form {
+    max-width: 400px; /* Maximum width for the form */
+    margin: 50px auto; /* Center the form on the page */
+    padding: 30px; /* Padding inside the form */
+    background-color: #ffffff; /* White background for the form */
+    border-radius: 12px; /* More rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Increased shadow for depth */
+    transition: transform 0.2s; /* Smooth transform on hover */
+}
+
+/* Hover effect on the form */
+#registration-form:hover {
+    transform: scale(1.02); /* Slightly enlarge the form on hover */
+}
+
+
+
+/* Title styles */
+.form-title {
+    text-align: center; /* Center the title */
+    margin-bottom: 20px; /* Space below the title */
+    color: #dc3545; /* Primary red color for the title */
+    font-size: 24px; /* Larger font size for the title */
+    font-weight: bold; /* Bold title text */
+}
+
+/* Group styles */
+.form-group {
+    margin-bottom: 30px; /* Space between groups */
+}
+
+/* Input and select styles */
+.form-input,
+.form-select {
+    width: 100%; /* Full width inputs */
+    padding: 12px; /* Increased padding */
+    border: 2px solid #dc3545; /* Red border */
+    border-radius: 6px; /* Rounded corners */
+    box-sizing: border-box; /* Include padding in width */
+    font-size: 16px; /* Font size */
+    transition: border-color 0.3s; /* Smooth border color transition */
+}
+
+/* Input focus styles */
+.form-input:focus,
+.form-select:focus {
+    border-color: #c82333; /* Darker red on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Button styles */
+.form-button {
+    width: 100%; /* Full width button */
+    padding: 12px; /* Padding for the button */
+    background-color: #dc3545; /* Primary button color */
+    color: white; /* Button text color */
+    border: none; /* No border */
+    border-radius: 6px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 18px; /* Font size */
+    font-weight: bold; /* Bold button text */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions for hover effects */
+}
+
+/* Button hover effects */
+.form-button:hover {
+    background-color: #c82333; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Label styles */
+label {
+    display: block; /* Block display for labels */
+    margin-bottom: 5px; /* Space between label and input */
+    color: #721c24; /* Dark red color for labels */
+    font-weight: 600; /* Slightly bolder labels */
+}
+
+/* Responsive design */
+@media (max-width: 500px) {
+    #registration-form {
+        width: 90%; /* Full width on smaller screens */
+        padding: 20px; /* Less padding for small screens */
+    }
+}
+
+
+.error-container {
+    background-color: #f8d7da; /* Light red background */
+    color: #721c24;           /* Dark red text color */
+    border: 1px solid #f5c6cb; /* Light red border */
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+}
+
+.error {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.error-container p {
+    margin: 0;
+}
+
+/* Container for the login form */
+#login-form {
+    max-width: 400px; /* Maximum width for the form */
+    width: 100%; /* Make the form responsive */
+    padding: 30px; /* Padding inside the form */
+    background-color: #fff; /* White background */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.2s; /* Smooth transform on hover */
+}
+
+/* Hover effect for the form */
+#login-form:hover {
+    transform: scale(1.02); /* Slight zoom effect on hover */
+}
+
+.btn-modify {
+    display: inline-block;
+    margin-top: 20px; /* Space above the button */
+    padding: 10px 20px; /* Vertical and horizontal padding */
+    font-size: 16px; /* Font size */
+    color: #fff; /* Text color */
+    background-color: #007bff; /* Bootstrap primary color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+.btn-modify:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+.user-image {
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    margin-bottom: 20px;
+}
+.card {
+    width: 80%; /* Cover nearly all the container */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow  for effect */
+    font-family: Arial, sans-serif;
+    margin: 20px auto; /* Center the card */
+    position: relative; /* Normal flow to maintain padding inside container */
+}
+
+/* Styling for the user image */
+.user-image img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/* Styling for the user name */
+.user-fullname {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center; /* Center the name */
+}
+
+/* Styling for user-info */
+.user-info {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Displaying user-info items in two columns */
+.user-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.user-info p {
+    flex: 1; /* Make each item take equal space */
+}
+
+.card h1 {
+    margin-bottom: 30px; /* Space below the heading */
+}
+
+/* Make the entire text more readable */
+h2, p {
+    color: #555;
+}
+
+/* Add a hover effect for the card */
+.card:hover {
+    transform: translateY(-5px); /* Slight elevation */
+    transition: transform 0.3s ease;
+}
+
+.page-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px; /* Space between title and other content */
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
+    gap: 50px; /* Space between the grid items */
+    max-width: 1200px; /* Optional: limit the max width of the grid */
+    margin: 20px auto; /* Centers the grid */
+}
+
+.course-item {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center-aligns the text */
+    font-family: Arial, sans-serif; /* Changes font family */
+}
+
+.course-item a {
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.course-item a:hover {
+    color: #4CAF50;
+}
+
+
+/* General styling */
+/* body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+} */
+
+/* General container styling
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+} */
+
+/* Annonce styling */
+/* .annonces, .documents {
+    width: 100%;
+    padding: 30px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+} */
+
+/* Annonce box styling */
+.annonce-box {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    background-color: #f1f1f1;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.annonce-box:hover {
+    background-color: #e9ecef;
+}
+
+.annonce-title {
+    font-size: 1.8em;
+    color: #0056b3;
+    margin: 0;
+}
+
+.annonce-content {
+    font-size: 1.1em;
+    color: #666;
+    margin: 10px 0;
+}
+
+.annonce-date {
+    font-size: 0.95em;
+    color: #999;
+    text-align: right;
+    margin-top: 15px;
+}
+
+/* Document section styling */
+.documents-title {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.document-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background-color: #f1f1f1;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.document-box:hover {
+    background-color: #e9ecef;
+}
+
+.document-title {
+    font-size: 1.3em;
+    color: #0056b3;
+    margin: 0;
+}
+
+.document-link {
+    font-size: 1.1em;
+    color: #0056b3;
+    text-decoration: none;
+    border-bottom: 1px dashed #0056b3;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.document-link:hover {
+    color: #003f7f;
+    border-bottom: 1px solid #003f7f;
+}
