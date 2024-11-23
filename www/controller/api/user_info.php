@@ -27,7 +27,7 @@ if (isset($_SESSION['user_id'])) {
         $user_info["group_tp"] = $row['group_tp'];
         $user_info["group_anglais"] = $row['group_anglais'];
     } else if ($row['role'] == "Professor") {
-        $query = "SELECT * From Professeurs WHERE id = $user_id LIMIT 1";
+        $query = "SELECT * From Professeurs WHERE prof_id = $user_id LIMIT 1";
         $result = mysqli_query($conn, $query);
         $row = mysqli_fetch_assoc($result);
         $user_info["departement"] = $row['departement'];
