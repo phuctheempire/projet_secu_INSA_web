@@ -30,6 +30,13 @@ function getComments( $annonce_id){
     return $comments;
 }
 
+function commit_comment($user_id, $annonce_id, $content, $date){
+    $conn = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+    $query = "INSERT INTO `Comments` (author_id, annon_id, content, date) VALUES ($user_id, $annonce_id, '$content', '$date');";
+    mysqli_query($conn, $query);
+    mysqli_close($conn);
+}
+
 
 
 

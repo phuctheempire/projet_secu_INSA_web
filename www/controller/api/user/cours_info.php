@@ -1,6 +1,7 @@
 <?php
-require ROOT_PATH . DS . "functions" . DS . "user" . DS . "user_info.php";
-require ROOT_PATH . DS . "functions" . DS . "user" . DS . "cours_info.php";require ROOT_PATH . DS . "functions" . DS . "user" . DS . "cours_info.php";
+include_once ROOT_PATH . DS . "functions" . DS . "user" . DS . "user_info.php";
+include_once ROOT_PATH . DS . "functions" . DS . "user" . DS . "cours_info.php";
+// require ROOT_PATH . DS . "functions" . DS . "user" . DS . "cours_info.php";
 if ( isset($_SESSION['user_id'])){
     $cours_id = $_GET['cours_id'];
     $user_info = getUserInfo($_SESSION['user_id']);
