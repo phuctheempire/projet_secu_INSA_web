@@ -1,11 +1,11 @@
-version: "2"
+version: "3"
 services:
     php:
         build: .
         ports: 
             - "2024:80"
         volumes:
-            - ./www:/var/www/html/ # syncronize the local folder with the container folder
+            - ./www:/var/www/html/ # synchronize the local folder with the container folder
         links:
             - db
         networks:
@@ -34,5 +34,24 @@ services:
         #     MYSQL_USER: user
         #     MYSQL_PASSWORD: test
         #     MYSQL_ROOT_PASSWORD: test
+    ftp:
+        image: fauria/vsftpd
+        ports:
+            - "21:21"       # FTP command port
+            - "20:20"       # FTP data port
+            - "21100-21110:21100-21110" # Passive mode ports
+        volumes:
+            - ./www:/home/vsftpd # Map local folder to FTP server folder
+        environment:
+            FTP_USER: user      # FTP username
+            FTP_PASS: password  # FTP password
+            PASV_ADDRESS: 127.0.0.1 # Use container's IP or your server's public IP
+            PASV_MIN_PORT: 21100
+            PASV_MAX_PORT: 21110
+            LOCAL_UMASK: 022
+            FILE_OPEN_MODE: 0666
+        networks:
+            - default
+
 volumes:
     persistent:

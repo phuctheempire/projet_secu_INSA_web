@@ -238,7 +238,14 @@ BEGIN
 END //
 DELIMITER ;
 
-
+DELIMITER //
+CREATE PROCEDURE insert_annonces (
+    IN var_nom VARCHAR(255)
+)
+BEGIN
+    INSERT INTO Matiere (nom) VALUES (var_nom);
+END //
+DELIMITER ;
 
 DELIMITER //
 CREATE PROCEDURE login(
