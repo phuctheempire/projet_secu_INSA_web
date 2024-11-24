@@ -194,7 +194,10 @@ CREATE PROCEDURE insert_student(
     IN var_telephone VARCHAR(255),
     IN var_image_path VARCHAR(255),
     IN var_departement ENUM('STI', 'MRI'),
-    IN var_promo ENUM('1A', '2A', '3A', '4A', '5A')
+    IN var_promo ENUM('1A', '2A', '3A', '4A', '5A'),
+    IN group_td ENUM('TD1', 'TD2', 'TD3', 'Big Data', 'Securite', 'Mobilite', 'ASL', '4AS', '2SU'),
+    IN group_tp ENUM('TP1', 'TP2', 'TP3'),
+    IN group_anglais ENUM('Anglais1', 'Anglais2', 'Anglais3', 'Anglais4', 'Anglais5', 'Anglais6')
 )
 BEGIN
     DECLARE var_stu_id INT;

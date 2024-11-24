@@ -4,7 +4,9 @@ if (isset($_SESSION['user_id'])) {
     $user_id = $_GET['id'];
     // var_dump($user_id);
     $query = "SELECT nom, prenom, email, sexe, date_naissance, adresse, telephone, image_path, role From Users WHERE id = $user_id LIMIT 1";
-    $result = mysqli_query($conn, $query);
+    try {$result = mysqli_query($conn, $query);} catch (Exception $e) {
+    }
+    
     if (! $result) {
         echo "<h2> No user found with " . $user_id . "</h2>";
     } else {

@@ -2,7 +2,7 @@
 
 function getCoursList() {
     // Your logic to fetch the list of courses
-    $conn = mysqli_connect("db", "public", "qwerty", DB_NAME);
+    $conn = mysqli_connect("localhost", "root", "root", DB_NAME);
     $query = "SELECT * FROM Matiere;";
     $result = mysqli_query($conn, $query);
     $courses = array();

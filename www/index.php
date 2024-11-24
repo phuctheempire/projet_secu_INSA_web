@@ -10,7 +10,7 @@ include "components".DS."header.php";
 
     <?php
 
-    $conn = mysqli_connect('db', 'root', 'test', "insa_db");
+    $conn = mysqli_connect('localhost', 'root', 'root', "insa_db");
 
     $query = 'SELECT * From Users';
     $result = mysqli_query($conn, $query);
@@ -33,6 +33,21 @@ include "components".DS."header.php";
     // var_dump($_SESSION['user_id']);
     mysqli_close($conn);
 
+    ?>
+    <h1>Test FTP connection</h1>
+    <?php
+        $ftp_conn = ftp_connect(FTP_HOST) or die("Could not connect to localhost");
+        ftp_login($ftp_conn, FTP_USER, FTP_PASS) or die("Could not login");
+        ftp_pasv($ftp_conn, true);
+        $files = scandir(LOCAL_PATH);
+        var_dump($files);
+        $files_on_ftp = ftp_nlist($ftp_conn, REMOTE_PATH);
+        var_dump($files_on_ftp);
+        if ( ftp_put($ftp_conn, REMOTE_PATH . "/files/abc.txt", LOCAL_PATH . "/abc.txt", FTP_BINARY) ) {
+            var_dump("File uploaded successfully") ;
+        } else {
+            var_dump("Error uploading file") ;
+        }
     ?>
     
     </div>
