@@ -40,7 +40,7 @@ function getAllUsers() {
 
 function a_getUserById($user_id) {
     global $conn;
-    $query = "SELECT id, password, nom, prenom, email, sexe, date_naissance, adresse, telephone, image_path, role FROM Users WHERE id = $user_id";
+    $query = "SELECT id, password, nom, prenom, email, sexe, date_naissance, adresse, telephone, image_path, role FROM Users WHERE id = $user_id;";
     $result = mysqli_query($conn, $query);
 
     if (!$result) {
@@ -157,28 +157,10 @@ function updateUserImagePath($id, $image_path) {
 
 function updateUserPassword($id, $password) {
     global $conn;
-
-    $query = "UPDATE Users SET password = ? WHERE id = ?";
-
-    $stmt = mysqli_prepare($conn, $query);
-
-    if (!$stmt) {
-        die("Prepare failed: " . mysqli_error($conn));
-    }
-
-    // 绑定参数
-    mysqli_stmt_bind_param($stmt, "si", $password, $id);
-
-    // 执行查询
-    $success = mysqli_stmt_execute($stmt);
-
-    if (!$success) {
-        die("Execute failed: " . mysqli_stmt_error($stmt));
-    }
-
-    // 关闭语句
-    mysqli_stmt_close($stmt);
-
+    $query = "UPDATE Users SET password = $password WHERE id = $id";
+    $result = mysqli_query($conn, $query);
+    echo "<h2>" . $result . "</h2>";
+    return $result;
 }
 
 function updateAllUsersImagePathToDefault() {

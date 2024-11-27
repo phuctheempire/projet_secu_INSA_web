@@ -1,4 +1,8 @@
 <?php
+include_once ROOT_PATH . DS . "functions" . DS . "admin" . DS . "admin_functions.php";
+// require ROOT_PATH . DS . "controller" . DS . "config.php";
+
+
 if (isset($_SESSION['user_id'])) {
     $user_id = $_GET['id'];
     if ($user_id == $_SESSION['user_id']) {
@@ -47,24 +51,26 @@ if (isset($_SESSION['user_id'])) {
 }
 
 if (isset($_POST['change-info'])) {
+    $user_id = $_SESSION['user_id'];
+    // echo "<h2> User ID: " . $user_id . "</h2>";
     $nom = ($_POST['nom']);
     $prenom = ($_POST['prenom']);
-    // $email = ($_POST['email']);
+    $email = ($_POST['email']);
     $sexe = ($_POST['sexe']);
     $date_naissance = ($_POST['date_naissance']);
     $adresse = ($_POST['adresse']);
     $telephone = ($_POST['telephone']);
-
     // Validate form inputs
     // Check if username or email already exists
-    $sql = "UPDATE Users SET nom = '$nom', prenom = '$prenom', sexe = '$sexe', date_naissance = '$date_naissance', adresse = '$adresse', telephone = '$telephone' WHERE id = $user_id;";
+    $sql = "UPDATE Users SET email = '$email', nom = '$nom', prenom = '$prenom', sexe = '$sexe', date_naissance = '$date_naissance', adresse = '$adresse', telephone = '$telephone' WHERE id = '$user_id';";
     $result = mysqli_query($conn, $sql);
     if ($result) {
         $_SESSION['message'] = "User info updated successfully";
         header('location: /pages/user/user_page.php?id=' . $user_id);
-        exit();
+        // exit();
     } else {
         // array_push($errors, "Failed to update user info");
+        // die("Database Query Failed: " . mysqli_error($conn));
     }
 
 }

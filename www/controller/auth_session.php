@@ -14,7 +14,7 @@ if (isset($_POST['login_btn'])) {
         array_push($errors, "Password required");
     }
     if (empty($errors)) {
-        $sql = "CALL login('$email', '$password')";
+        $sql = "SELECT * FROM Users WHERE email = '$email' AND password = '$password' LIMIT 1;";
         $result = mysqli_query($conn, $sql);
         // var_dump($result);
         // echo mysqli_num_rows($result);

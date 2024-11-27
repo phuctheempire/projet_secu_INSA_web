@@ -43,7 +43,7 @@ include "components".DS."header.php";
         var_dump($files);
         $files_on_ftp = ftp_nlist($ftp_conn, REMOTE_PATH);
         var_dump($files_on_ftp);
-        if ( ftp_put($ftp_conn, REMOTE_PATH . "/files/nan.txt", LOCAL_PATH . "/abc.txt", FTP_BINARY) ) {
+        if ( ftp_put($ftp_conn, REMOTE_PATH . "/files/test.pdf", LOCAL_PATH . "/files/test.pdf", FTP_BINARY) ) {
             var_dump("File uploaded successfully") ;
         } else {
             var_dump("Error uploading file") ;

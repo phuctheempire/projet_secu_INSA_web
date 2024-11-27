@@ -3,6 +3,7 @@ include_once ROOT_PATH . DS . "functions" . DS . "admin" . DS . "admin_functions
 if (isset($_GET['id'])) {
     $user_id = $_GET['id'];
     $user = a_getUserById($user_id); // 在 admin_user_info.php 中定义的函数
+
 }
 $success = true;
 // echo "<h2>". $success . "</h2>";

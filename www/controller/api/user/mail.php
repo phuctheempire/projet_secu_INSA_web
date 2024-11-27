@@ -23,8 +23,6 @@ if (isset($_POST['send_email'])){
         'date' => date('Y-m-d')
     );
     $success = send_email($email);
-    if ($success){
-        header("Location: mail.php?id=".$_SESSION['user_id']);
-        exit;
-    }
+    header("Location: mail.php?id=".$_SESSION['user_id']);
+    exit;
 }

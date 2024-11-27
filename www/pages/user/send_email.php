@@ -10,7 +10,7 @@ require ROOT_PATH . DS . "components" . DS . "nav_bar.php";
     <div class="container">
         <div class="card">
             <h1 class="page-title"> Send an email</h1>
-            <form method="post" action="mail.php?id=<?php echo $_SESSION['user_id'] ?>" id="send-email-form">
+            <form method="post" action="/pages/user/mail.php?id=<?php echo $_SESSION['user_id'] ?>" id="send-email-form">
                 <div class="form-group">
                     <label for="receiver_emails">Receiver emails:</label>
                     <input type="text" name="receiver_emails" class="form-input" id="receiver_email" required>

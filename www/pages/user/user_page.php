@@ -10,7 +10,7 @@ require ROOT_PATH . DS . "components" . DS . "nav_bar.php";
     <div class="container">
         <?php $user_id = $_GET['id'];
         if ($user_id != $_SESSION['user_id']) { ?>
-            <h2> Can't access to user <?php echo $user_id ?> </h2>
+            <h2> Can't access to user <?php echo $user_id?> </h2>
         <?php } else { ?>
         <div class="card" id="user-profile-1">
             <h1 class="page-title">User Profile</h1> <!-- Added Page Title -->

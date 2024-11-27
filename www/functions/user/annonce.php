@@ -37,6 +37,9 @@ function commit_comment($user_id, $annonce_id, $content, $date){
     mysqli_close($conn);
 }
 
+function add_annonce($annonce){
+   $query = "INSERT INTO `Annoncement` (author_id, matier_id, title, content, date) VALUES ($annonce[author_id], '$annonce[matier_id]', '$annonce[title]', '$annonce[content]', '$annonce[date]');";
+}
 
 
 

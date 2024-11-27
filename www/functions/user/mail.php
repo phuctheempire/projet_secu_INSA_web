@@ -54,3 +54,12 @@ function get_email_by_id($id) {
     mysqli_close($conn);
     return $row['email'];
 }
+
+function get_email_detail( $id){
+    $conn = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+    $query = "SELECT * FROM Mails WHERE mail_id = '$id' LIMIT 1";
+    $result = mysqli_query($conn, $query);
+    $row = mysqli_fetch_assoc($result);
+    mysqli_close($conn);
+    return $row;
+}
