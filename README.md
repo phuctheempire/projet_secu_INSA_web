@@ -291,7 +291,10 @@ CALL insert_student(
     '0123456789',
     'Constans_Yoann.img',
     'STI',
-    '4A'
+    '4A',
+    'TD1',
+    'TP1',
+    'Anglais1'
 )
 CALL insert_professor(
     'jeremy.briffaut@insa-cvl.fr',

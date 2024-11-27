@@ -527,3 +527,175 @@ h2, p {
     text-align: right;
     margin-top: 5px;
 }
+
+
+/* General styles for the mail-list */
+.mail-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Adds space between mail cards */
+    padding: 10px;
+    max-width: 800px; /* Sets a limit to the list width */
+    margin: 0 auto; /* Centers the list */
+    font-family: Arial, sans-serif;
+}
+
+/* Styling for individual mail cards */
+.mail-card {
+    display: block;
+    text-decoration: none; /* Removes underline from links */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px;
+    background-color: #f9f9f9; /* Light background for the cards */
+    transition: box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.mail-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
+    background-color: #ffffff; /* Slightly brighter background */
+}
+
+/* Styles for mail-info */
+.mail-info {
+    font-size: 1rem;
+    color: #555; /* Subtle color for sender/receiver info */
+    margin: 0;
+}
+
+/* Styles for mail-title */
+.mail-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333; /* Darker color for the title */
+    margin: 5px 0;
+}
+
+/* Styles for mail-date */
+.mail-date {
+    font-size: 0.9rem;
+    color: #888; /* Muted color for the date */
+    margin: 0;
+    text-align: right;
+}
+
+/* Add responsive design */
+@media (max-width: 600px) {
+    .mail-list {
+        padding: 5px;
+    }
+    .mail-card {
+        padding: 10px;
+    }
+    .mail-title {
+        font-size: 1rem;
+    }
+    .mail-date {
+        font-size: 0.8rem;
+    }
+}
+/* Styling for the send-email-link button */
+.send-email-link {
+    display: inline-block; /* Makes it behave like a button */
+    padding: 10px 20px; /* Adds padding for a button-like feel */
+    background-color: #007BFF; /* Primary blue background */
+    color: #fff; /* White text for contrast */
+    text-decoration: none; /* Removes underline */
+    font-size: 1rem; /* Readable font size */
+    font-weight: bold; /* Bold text for emphasis */
+    border-radius: 5px; /* Rounded corners */
+    border: 2px solid transparent; /* Border for hover effect */
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease; /* Smooth animations */
+}
+
+/* Hover effect */
+.send-email-link:hover {
+    background-color: #0056b3; /* Darker blue for hover */
+    border-color: #0056b3; /* Matches hover color */
+    transform: translateY(-2px); /* Adds a slight lift effect */
+}
+
+/* Focus effect for accessibility */
+.send-email-link:focus {
+    outline: none; /* Removes default outline */
+    box-shadow: 0 0 5px #0056b3; /* Adds a blue focus ring */
+}
+
+/* Active effect for when the button is clicked */
+.send-email-link:active {
+    background-color: #004085; /* Even darker blue */
+    transform: translateY(0); /* Removes the lift effect */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    .send-email-link {
+        font-size: 0.9rem; /* Slightly smaller text */
+        padding: 8px 15px; /* Adjusted padding for smaller devices */
+    }
+}
+
+
+/* Styling for the textarea */
+.form-textarea {
+    width: 100%; /* Makes the textarea stretch to the form width */
+    height: 150px; /* Default height */
+    /* padding: 10px; Adds internal spacing */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Sets text size */
+    resize: vertical; /* Allows vertical resizing only */
+    background-color: #f9f9f9; /* Subtle background */
+    transition: border-color 0.3s ease; /* Smooth focus animation */
+}
+
+/* Focus state for the textarea */
+.form-textarea:focus {
+    border-color: #007BFF; /* Blue border when focused */
+    outline: none; /* Removes default outline */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Subtle shadow effect */
+}
+
+/* Styling for the submit button */
+.btn-submit {
+    display: inline-block; /* Button-like appearance */
+    padding: 10px 20px; /* Adds spacing */
+    background-color: #28a745; /* Green background */
+    color: #fff; /* White text */
+    border: none; /* Removes default border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Readable font size */
+    font-weight: bold; /* Makes text stand out */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth animations */
+}
+
+/* Hover effect for the button */
+.btn-submit:hover {
+    background-color: #218838; /* Darker green on hover */
+    transform: translateY(-2px); /* Slight lift */
+}
+
+/* Active state for the button */
+.btn-submit:active {
+    background-color: #1e7e34; /* Even darker green */
+    transform: translateY(0); /* Resets the lift */
+}
+
+/* Disabled state for the button */
+.btn-submit:disabled {
+    background-color: #6c757d; /* Gray background for disabled state */
+    cursor: not-allowed; /* Shows "not allowed" cursor */
+    opacity: 0.65; /* Reduces visibility */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    .form-textarea {
+        height: 120px; /* Adjust height for smaller screens */
+    }
+    .btn-submit {
+        font-size: 0.9rem; /* Slightly smaller font size */
+        padding: 8px 15px; /* Adjust padding */
+    }
+}

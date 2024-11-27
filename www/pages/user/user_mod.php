@@ -6,11 +6,15 @@ require ROOT_PATH . DS . "components" . DS . "nav_bar.php";
 ?>
 
 <body>
-<div class="container">
+<div class="container">        
+    <?php $user_id = $_GET['id'];
+        if ($user_id != $_SESSION['user_id']) { ?>
+            <h2> Can't access to user <?php echo $user_id ?> </h2>
+        <?php } else { ?>
     <div class="card" id="user-profile-1">
         <h1 >Modify User Information</h1>
     <form action="/pages/user/user_mod.php" method="POST">
-        
+    
         <div class="form-group">
             <label for="nom">Full Name:</label>
             <input class="form-input" type="text" id="nom" name="nom" placeholder="Enter your full name" value="<?php echo $user_info["nom"] ?>" required>
@@ -84,6 +88,7 @@ require ROOT_PATH . DS . "components" . DS . "nav_bar.php";
         <button type="submit" name="change-info" class="form-button">Submit Changes</button>
     </form>
     </div>
+    <?php } ?>
     
 </div>
 </body>
