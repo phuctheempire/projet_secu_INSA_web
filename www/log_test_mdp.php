@@ -2,7 +2,7 @@
 // Connexion à la base de données
 $servername = "db";
 $username = "root";
-$password = "test";
+$password = "root";
 $dbname = "insa_db";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
