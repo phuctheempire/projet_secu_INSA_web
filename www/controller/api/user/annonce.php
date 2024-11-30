@@ -19,6 +19,26 @@ if ( isset($_SESSION['user_id'])){
     // } else if ($user_info['role'] == "Professor") {
 
     // }
+
+    if ( isset( $_POST['mod_annonce'])){
+        $title = $_POST['title'];
+        $content = $_POST['content'];
+        $date = date('Y-m-d');
+        $annonce = array(
+            'annon_id'=> $_GET['annonce_id'],
+            'title' => $title,
+            'content' => $content,
+            'date' => $date
+        );
+        $result = modify_annonce($annonce);
+        if ($result) {
+            header('location: /pages/user/cours_info.php?cours_id=' . $annonce_info['matier_id']);
+        } else {
+            echo "Erreur lors de l'ajout de l'annonce";
+        }
+    }
+
+
 } else {
     header('location: /pages/public/login.php');
 }

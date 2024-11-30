@@ -20,13 +20,14 @@ if (isset($_POST['login_btn'])) {
         // echo mysqli_num_rows($result);
         if (mysqli_num_rows($result) > 0) {
             // get id of created user
-            $reg_user_id = mysqli_fetch_assoc($result)['id'];
+            $reg_user = mysqli_fetch_assoc($result);
+            $_SESSION['user_id'] = $reg_user['id'];
+            $_SESSION['user_role'] = $reg_user['role'];
             // die();
             // put logged in user into session array
-            $_SESSION['user_id'] = $reg_user_id;
             // if user is admin, redirect to admin area
             // redirect to public area
-            header('location: /pages/user/user_page.php?id='.urlencode($reg_user_id));
+            header('location: /pages/user/user_page.php?id='.urlencode($_SESSION['user_id']));
             exit(0);
         } else {
             array_push($errors, 'Wrong credentials');

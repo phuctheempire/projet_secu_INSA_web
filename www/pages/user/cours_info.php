@@ -14,6 +14,10 @@ require ROOT_PATH . DS . "components" . DS . "nav_bar.php";
                         <h3 class="annonce-title"><?php echo $annonce["title"]; ?></h3>
                         <p class="annonce-content"><?php echo $annonce["content"]; ?></p>
                         <p class="annonce-date"><?php echo $annonce["date"]; ?></p>
+                        <?php if ( $_SESSION['user_role'] == 'Professor' and is_professeur($_GET['cours_id'], $_SESSION['user_id'])){ ?>
+                            <a href="annonce_edit.php?annonce_id=<?php echo $annonce["annon_id"] ?>" class="btn-modify">Modifier annonce</a> 
+                        <?php } ?>
+                        
                     </div>
                 </a>
             <?php } ?>
