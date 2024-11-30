@@ -1,0 +1,5 @@
+1)Pourcopier dans le bon repertoire : docker cp log_to_txt.php  projet_secu_insa_web_phpmyadmin_1:/var/www/html/
+2)Pour verifier: docker exec -it projet_secu_insa_web_phpmyadmin_1 ls -l /var/www/html/
+docker-compose down & docker compose up -d
+docker ps
+3)Pour executer: docker exec -it f02a95815184 php /var/www/html/log_to_txt.php 
