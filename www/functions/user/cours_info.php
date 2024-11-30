@@ -26,13 +26,3 @@ function getDocuments( $cours_id){
     return $documents;
 }
 
-function is_professeur($matier_id, $prof_id){
-    $conn = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
-    $query = "SELECT * FROM `Classes` WHERE prof_id = $prof_id AND matier_id = $matier_id ;";
-    $result = mysqli_query($conn, $query);
-    if ( mysqli_num_rows($result) > 0){
-        return true;
-    }else{
-        return false;
-    }
-}

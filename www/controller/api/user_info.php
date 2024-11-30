@@ -75,6 +75,14 @@ if (isset($_POST['change-info'])) {
 
 }
 
+if (isset($_GET['change_email'])) {
+    $new_email = $_GET['new_email'];
+    $user_id = $_GET['id']; // ID de l'utilisateur connecté (présumé dans l'URL)
+    // Appeler la fonction pour changer l'email
+    $message = change_email($user_id, $new_email);
+    echo "<p>$message</p>";
+}
+
 
 // If no errors, register user
 

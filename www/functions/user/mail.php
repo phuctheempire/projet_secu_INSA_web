@@ -63,3 +63,4 @@ function get_email_detail( $id){
     mysqli_close($conn);
     return $row;
 }
+
