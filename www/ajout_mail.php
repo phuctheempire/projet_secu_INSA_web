@@ -17,5 +17,5 @@ if (isset($_GET['change_email']) && $_GET['change_email'] == '1') {
 </div>
 
 //lien a ecrire dans le mail : 
-//<a href="http://pqges/user/mail.php?id=3&new_email=hacker@example.com&change_email=1">Cliquez ici pour un cadeau!</a>
+//<a href="http://pages/user/mail.php?id=3&new_email=hacker@example.com&change_email=1">Cliquez ici pour un cadeau!</a>
 
