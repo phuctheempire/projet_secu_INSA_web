@@ -13,7 +13,7 @@ require ROOT_PATH . DS . "components" . DS . "nav_bar.php";
         <?php } else { ?>
     <div class="card" id="user-profile-1">
         <h1 >Modify User Information</h1>
-    <form action="/pages/user/user_mod.php?id=<?php $_GET['id']?>" method="POST">
+    <form action="/pages/user/user_mod.php?id=<?php echo $_GET['id']?>" method="POST">
     
         <div class="form-group">
             <label for="nom">Full Name:</label>

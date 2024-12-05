@@ -33,8 +33,9 @@ function getComments( $annonce_id){
 function commit_comment($user_id, $annonce_id, $content, $date){
     $conn = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
     $query = "INSERT INTO `Comments` (author_id, annon_id, content, date) VALUES ($user_id, $annonce_id, '$content', '$date');";
-    mysqli_query($conn, $query);
+    $result = mysqli_query($conn, $query);
     mysqli_close($conn);
+    return $result;
 }
 
 function add_annonce($annonce){

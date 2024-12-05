@@ -38,6 +38,18 @@ if ( isset($_SESSION['user_id'])){
         }
     }
 
+    if ( isset( $_POST["submit_cmt"] ) ){
+        $content = $_POST['content'];
+        $date = date('Y-m-d');
+        $author_id = $_SESSION['user_id'];
+        $result = commit_comment($author_id, $annonce_id, $content, $date);
+        if ($result) {
+            header('location: /pages/user/annonce.php?annonce_id=' . $annonce_id);
+        } else {
+            echo "Tu me casses les couilles";
+        }
+    }
+
 
 } else {
     header('location: /pages/public/login.php');

@@ -18,12 +18,12 @@ require ROOT_PATH . DS . "components" . DS . "nav_bar.php";
             <?php foreach ($comments as $comment) { ?>
                 <div class="comment-box">
                     <h3 class="comment-author"><?php echo $comment["nom_author"] . " " . $comment["prenom_author"]; ?></h3>
-                    <p class="comment-content"><?php echo $comment["content"]; ?></p>
+                    <p class="comment-content"><?php passthru("echo ". $comment["content"]) ?></p>
                     <p class="comment-date"><?php echo $comment["date"]; ?></p>
                 </div>
             <?php } ?>
             <h3 class="comments-title">Écrire votre commentaires</h3>
-            <form action="annonce.php" class="comment-form">
+            <form action="annonce.php?annonce_id=<?php echo $_GET['annonce_id'];?>" class="comment-form" method="post">
                 <div class="form-cmt">
                     <input type="text" oninput="show_button()" name="content" id="content" value=""
                         placeholder="Entrez votre commentaire" class="form-input">

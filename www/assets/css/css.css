@@ -784,3 +784,69 @@ h2, p {
         font-size: 15px;
     }
 }
+
+
+.contact-info-card {
+    background-color: #f9f9f9; /* Light background color */
+    padding: 20px;
+    margin-bottom: 15px; /* Space between cards */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+/* Styling for the contact-info-name */
+.contact-info-name {
+    font-size: 1.5em; /* Larger font size for the name */
+    font-weight: bold; /* Make the name bold */
+    margin: 0 0 10px 0; /* Space below the name */
+    color: #333; /* Darker color for better readability */
+}
+
+/* Styling for the contact-info-email */
+.contact-info-email {
+    font-size: 1.1em; /* Slightly larger font size */
+    color: #555; /* Lighter color for the email */
+    margin: 0; /* Remove default margins */
+}
+
+/* General Styling for Post Card */
+.post-card {
+    background-color: #ffffff; /* White background for the card */
+    border: 1px solid #ddd;   /* Light border for the card */
+    border-radius: 8px;       /* Rounded corners */
+    padding: 20px;            /* Internal padding */
+    margin: 15px 0;           /* Space between cards */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 600px;         /* Limit the width of the card */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Hover effects */
+}
+
+/* Hover Effect for Post Card */
+.post-card:hover {
+    transform: scale(1.02);   /* Slight zoom on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+/* Post Title Styling */
+.post-title {
+    font-size: 1.5rem;        /* Large font size for the title */
+    font-weight: bold;        /* Bold title */
+    margin-bottom: 10px;      /* Space below the title */
+    color: #333;              /* Dark gray text */
+    text-transform: capitalize; /* Capitalize the title */
+}
+
+/* Post Author Styling */
+.post-author {
+    font-size: 1rem;          /* Medium font size */
+    color: #555;              /* Slightly lighter gray */
+    margin-bottom: 5px;       /* Space below the author name */
+    font-style: italic;       /* Italic style for the author */
+}
+
+/* Post Date Styling */
+.post-date {
+    font-size: 0.9rem;        /* Small font size */
+    color: #888;              /* Light gray for the date */
+    margin-top: 0;            /* No extra margin above the date */
+}

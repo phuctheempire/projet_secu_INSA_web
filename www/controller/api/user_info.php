@@ -2,52 +2,53 @@
 include_once ROOT_PATH . DS . "functions" . DS . "admin" . DS . "admin_functions.php";
 // require ROOT_PATH . DS . "controller" . DS . "config.php";
 
+if ( isset($_GET['error'])){
 
+} else{
 if (isset($_SESSION['user_id'])) {
     $user_id = $_GET['id'];
-    if ($user_id == $_SESSION['user_id']) {
-        $conn = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
-        $query = "SELECT nom, prenom, email, sexe, date_naissance, adresse, telephone, image_path, role From Users WHERE id = $user_id LIMIT 1";
-        try {
+    $conn = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+    $query = "SELECT nom, prenom, email, sexe, date_naissance, adresse, telephone, image_path, role From Users WHERE id = $user_id LIMIT 1";
+    try {
+        $result = mysqli_query($conn, $query);
+        // echo "<h2>".$result."</h2>";
+    } catch (Exception $e) {
+        header('location: /pages/user/user_page.php?error=1');
+    }
+        $row = mysqli_fetch_assoc($result);
+        if ( !$row){
+            header('location: /pages/user/user_page.php?error=1');
+        }
+        $user_info = array(
+            "nom" => $row['nom'],
+            "prenom" => $row['prenom'],
+            "email" => $row['email'],
+            "sexe" => $row['sexe'],
+            "date_naissance" => $row['date_naissance'],
+            "adresse" => $row['adresse'],
+            "telephone" => $row['telephone'],
+            "image_path" => $row['image_path'],
+            "role" => $row['role']
+        );
+        if ($row['role'] == "Student") {
+            $query = "SELECT * From Students WHERE stu_id = $user_id LIMIT 1";
             $result = mysqli_query($conn, $query);
-        } catch (Exception $e) {
-        }
-        if (!$result) {
-            echo "<h2> No user found with " . $user_id . "</h2>";
-        } else {
             $row = mysqli_fetch_assoc($result);
-            $user_info = array(
-                "nom" => $row['nom'],
-                "prenom" => $row['prenom'],
-                "email" => $row['email'],
-                "sexe" => $row['sexe'],
-                "date_naissance" => $row['date_naissance'],
-                "adresse" => $row['adresse'],
-                "telephone" => $row['telephone'],
-                "image_path" => $row['image_path'],
-                "role" => $row['role']
-            );
-            if ($row['role'] == "Student") {
-                $query = "SELECT * From Students WHERE stu_id = $user_id LIMIT 1";
-                $result = mysqli_query($conn, $query);
-                $row = mysqli_fetch_assoc($result);
-                $user_info["departement"] = $row['departement'];
-                $user_info["promo"] = $row['promo'];
-                $user_info["group_td"] = $row['group_td'];
-                $user_info["group_tp"] = $row['group_tp'];
-                $user_info["group_anglais"] = $row['group_anglais'];
-            } else if ($row['role'] == "Professor") {
-                $query = "SELECT * From Professeurs WHERE prof_id = $user_id LIMIT 1";
-                $result = mysqli_query($conn, $query);
-                $row = mysqli_fetch_assoc($result);
-                $user_info["departement"] = $row['departement'];
-            } else {
-                // echo "<h2> No user found with" . $user_id . "</h2>";
-            }
-        }
+            $user_info["departement"] = $row['departement'];
+            $user_info["promo"] = $row['promo'];
+            $user_info["group_td"] = $row['group_td'];
+            $user_info["group_tp"] = $row['group_tp'];
+            $user_info["group_anglais"] = $row['group_anglais'];
+        } else if ($row['role'] == "Professor") {
+            $query = "SELECT * From Professeurs WHERE prof_id = $user_id LIMIT 1";
+            $result = mysqli_query($conn, $query);
+            $row = mysqli_fetch_assoc($result);
+            $user_info["departement"] = $row['departement'];
+
     }
 } else {
     header('location: /pages/public/login.php');
+}
 }
 
 if (isset($_POST['change-info'])) {

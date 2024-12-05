@@ -5,7 +5,7 @@
     <div id="nav-left">
         <div class="nav_button"><a href="/pages/public/cours.php">Cours</a></div>
         <div class="nav_button"><a href="/pages/public/forum.php">Forum</a></div>
-        <div class="nav_button"><a href="/pages/public/programs.php">Programs</a></div>
+        <div class="nav_button"><a href="/pages/public/contact_info.php">Contact info</a></div>
     </div>
     <div id="nav-right">
         <?php 
