@@ -3,7 +3,7 @@
 ![image](https://github.com/user-attachments/assets/39a81782-5b44-4362-bf76-9f94a6ffd960)
 
 
-## Schema monitorimg & relation AMP et systeme
+## Schema monitoring & relation AMP et systeme
 
 ![image](https://github.com/user-attachments/assets/30589299-a20f-47a6-a241-ccd557e49b10)
 
