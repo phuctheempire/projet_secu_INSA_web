@@ -1,0 +1,12 @@
+Fuzzing: A tester sur ordi de phuc directement (et via ssh je crois) + telecharger wordlists necessaire
+-gobuster dir -u http://127.0.0.1:2024 -w /usr/share/wordlists/dirb/common.txt
+-gobuster dir -u http://127.0.0.1:2024 -w /usr/share/wordlists/rockyou.txt (peut etre trop long)
+-gobuster dir -u http://127.0.0.1:2024 -w /usr/share/wordlists/dirbuster/directory-list-{1.0|2.3-small|..}
+
+Bruteforce: Vu que je recupere hash de la base de donnée normalement pas besoin d'utiliser hydra, john the ripper devrai suffir
+-A faire au cas où : Crackstation
+-Identifier hash:
+--> hash-identifier, hashid HASH, haiti HASH (de preference utiliser haiti)
+-Cracker hash:
+--> john fichier_contenant_hash.txt --format= (hash) --wordlist=/usr/share/wordlists/liste_mot.txt
+
