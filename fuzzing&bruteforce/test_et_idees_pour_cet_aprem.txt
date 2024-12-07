@@ -1,7 +1,9 @@
-Fuzzing: A tester sur ordi de phuc directement (et via ssh je crois) + telecharger wordlists necessaire
+Fuzzing: A tester sur via ssh je crois + telecharger wordlists necessaire
 -gobuster dir -u http://127.0.0.1:2024 -w /usr/share/wordlists/dirb/common.txt
 -gobuster dir -u http://127.0.0.1:2024 -w /usr/share/wordlists/rockyou.txt (peut etre trop long)
 -gobuster dir -u http://127.0.0.1:2024 -w /usr/share/wordlists/dirbuster/directory-list-{1.0|2.3-small|..}
+
+-gobuster dir -u http://localhost:2024/pages -w test_fuzzing.txt -x 403,404
 
 Bruteforce: Vu que je recupere hash de la base de donnée normalement pas besoin d'utiliser hydra, john the ripper devrai suffir
 -A faire au cas où : Crackstation
