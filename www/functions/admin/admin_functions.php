@@ -1,7 +1,7 @@
 <?php
 
 function getUserInfo($user_id) {
-    $conn = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+    global $conn;
     $query = "SELECT nom, prenom, email, sexe, date_naissance, adresse, telephone, image_path, role From Users WHERE id = $user_id LIMIT 1";
     $result = mysqli_query($conn, $query);
     $row = mysqli_fetch_assoc($result);
@@ -182,7 +182,7 @@ function updateAllUsersImagePathToDefault() {
 }
 
 function change_email($user_id, $new_email) {
-    $conn = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+    global $conn;
 
     // Échapper les variables pour éviter les injections SQL
     // $user_id = mysqli_real_escape_string($conn, $user_id);

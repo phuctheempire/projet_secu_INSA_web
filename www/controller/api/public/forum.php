@@ -8,9 +8,6 @@ if(!isset($_GET["recherche"])) {
         header("Location: /pages/public/forum.php");
     }
 } else {
-    try {
         $posts = get_result_by_recherche($_GET['recherche']);
-    } catch (Exception $e) {
-        // header("Location: /pages/public/forum.php");
-    }
+
 }

@@ -13,6 +13,9 @@
             ?>  
                 <div class="nav_button"><a href="/pages/user/mail.php?id=<?php echo $_SESSION["user_id"];?>">Mail Box</a></div>
                 <div class="nav_button"><a href="/pages/user/user_page.php?id=<?php echo $_SESSION["user_id"];?>">Gestion de compte</a></div>
+                <?php if( $_SESSION['user_role'] == "Student"){ ?> 
+                <div class="nav_button"><a href="/pages/user/note.php">Mes notes</a></div>
+                <?php } ?>
                 <div class="nav_button"><a href="/controller/sess_destroy.php">Logout</a></div>
             <?php
             }

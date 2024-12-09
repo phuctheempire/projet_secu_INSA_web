@@ -1,7 +1,7 @@
 <?php
 
 function getAnnonce( $cours_id){
-    $conn = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+    global $conn;
     $query = "SELECT * FROM `Annoncement` WHERE matier_id = $cours_id ORDER BY date;";
     $result = mysqli_query($conn, $query);
     $annonces = array();
@@ -14,7 +14,7 @@ function getAnnonce( $cours_id){
 }
 
 function getDocuments( $cours_id){
-    $conn = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+    global $conn;
     $query = "SELECT * FROM `Documents` WHERE matier_id = $cours_id ORDER BY date;";
     $result = mysqli_query($conn, $query);
     $documents = array();
@@ -26,3 +26,9 @@ function getDocuments( $cours_id){
     return $documents;
 }
 
+function is_professeur($professeur, $matier){
+    global $conn;
+    $query = "SELECT * FROM `Classes` WHERE prof_id = $professeur AND matier_id = $matier";
+    $result = mysqli_query($conn, $query);
+    return ( mysqli_num_rows($result) > 0);
+}

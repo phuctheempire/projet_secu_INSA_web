@@ -20,7 +20,7 @@ define('LOCAL_PATH', '/home/xpham/Public/ASPrjet/projet_secu_INSA_web/www/assets
 
 
 $conn = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
-
+$user1 = mysqli_connect('localhost', 'user1', 'user1', DB_NAME);
 const DS = DIRECTORY_SEPARATOR;
 define('ROOT_PATH', realpath(dirname(__FILE__) . '/..'));
 define('BASE_URL', 'http://localhost:2024/');

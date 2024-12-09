@@ -7,45 +7,30 @@ require ROOT_PATH . DS . "components" . DS . "nav_bar.php";
 <body>
     <div class="container">
         <div class="card">
-            <h2 id="annonces-title">Annonces</h2>
+            <h2 id="annonces-title">Gestion des cours</h2>
+            <h3 class="section-title" >Annonces</h3>
             <?php foreach ($annonces as $annonce) { ?>
                 <a href="annonce.php?annonce_id=<?php echo $annonce["annon_id"] ?>" style="text-decoration:none">
                     <div class="annonce-box">
                         <h3 class="annonce-title"><?php echo $annonce["title"]; ?></h3>
                         <p class="annonce-content"><?php echo $annonce["content"]; ?></p>
                         <p class="annonce-date"><?php echo $annonce["date"]; ?></p>
-                        <?php if ( $_SESSION['user_role'] == 'Professor' and is_professeur($_GET['cours_id'], $_SESSION['user_id'])){ ?>
+                        <?php if ( $_SESSION['user_role'] == 'Professor' and is_professeur($_SESSION['user_id'],$_GET['cours_id'])){ 
+                            // var_dump($_SESSION['user_id'], $_GET['cours_id'])
+                            ?>
                             <a href="annonce_edit.php?annonce_id=<?php echo $annonce["annon_id"] ?>" class="btn-modify">Modifier annonce</a> 
                         <?php } ?>
                         
                     </div>
                 </a>
+                <?php } ?>
+                <a href="annonce_add.php?cours_id=<?php echo $_GET['cours_id']?>" class="btn-modify">Ajoute un annonce</a>
+            <?php if ( $_SESSION['user_role'] == 'Professor' and is_professeur($_SESSION['user_id'],$_GET['cours_id'])){ 
+                            // var_dump($_SESSION['user_id'], $_GET['cours_id'])
+                            ?>
+                            <h3 class="section-title">Notes</h3>
+                            <a href="note_info.php?cours_id=<?php echo $_GET['cours_id'] ?>" class="btn-modify">Gestion des notes</a> 
             <?php } ?>
         </div>
-        <div class="card">
-            <h2 class="documents-title">Documents</h2>
-            <div class="document-box">
-                <h3 class="document-title">TP1</h3>
-                <a href="/assets/documents/TP1.pdf" class="document-link">TP1</a>
-            </div>
-            <div class="document-box">
-                <h3 class="document-title">TP2</h3>
-                <a href="/assets/documents/TP2.pdf" class="document-link">TP2</a>
-            </div>
-            <div class="document-box">
-                <h3 class="document-title">TP3</h3>
-                <a href="/assets/documents/TP3.pdf" class="document-link">TP3</a>
-            </div>
-            <div class="document-box">
-                <h3 class="document-title">TP4</h3>
-                <a href="/assets/documents/TP4.pdf" class="document-link">TP4</a>
-            </div>
-            <div class="document-box">
-                <h3 class="document-title">TP5</h3>
-                <a href="/assets/documents/TP5.pdf" class="document-link">TP5</a>
-            </div>
-        </div>
-
-
     </div>
 </body>

@@ -207,6 +207,19 @@ h1, h2, h3, h4, h5, h6 { color: #444; font-family: 'Averia Serif Libre', cursive
     transition: background-color 0.3s, transform 0.2s; /* Smooth transitions for hover effects */
 }
 
+.new-post-button {
+    width: 100%; /* Full width button */
+    padding: 12px; /* Padding for the button */
+    background-color:#007bff; /* Primary button color */
+    color: white; /* Button text color */
+    border: none; /* No border */
+    border-radius: 6px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 18px; /* Font size */
+    font-weight: bold; /* Bold button text */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions for hover effects */
+}
+
 /* Button hover effects */
 .form-button:hover {
     background-color: #c82333; /* Darker shade on hover */
@@ -669,6 +682,18 @@ h2, p {
     cursor: pointer; /* Pointer cursor on hover */
     transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth animations */
 }
+.btn-delete {
+    display: inline-block; /* Button-like appearance */
+    padding: 10px 20px; /* Adds spacing */
+    background-color: red; /* Green background */
+    color: #fff; /* White text */
+    border: none; /* Removes default border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Readable font size */
+    font-weight: bold; /* Makes text stand out */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth animations */
+}
 
 /* Hover effect for the button */
 .btn-submit:hover {
@@ -849,4 +874,70 @@ h2, p {
     font-size: 0.9rem;        /* Small font size */
     color: #888;              /* Light gray for the date */
     margin-top: 0;            /* No extra margin above the date */
+}
+/* Styling for the note-card container */
+.note-card {
+    background-color: #f9f9f9; /* Light gray background */
+    border: 1px solid #ddd;   /* Subtle border */
+    border-radius: 8px;       /* Rounded corners */
+    padding: 16px;            /* Inner spacing */
+    margin: 12px 0;           /* Vertical spacing between cards */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    font-family: Arial, sans-serif; /* Clean font */
+}
+
+/* Styling for the name-class paragraph */
+.name-class {
+    font-size: 1.2em;        /* Slightly larger text */
+    font-weight: bold;       /* Bold for emphasis */
+    color: #333;             /* Dark text color */
+    margin-bottom: 8px;      /* Space below name */
+}
+
+/* Styling for the note paragraph */
+.note {
+    font-size: 1em;          /* Normal text size */
+    color: #555;             /* Medium gray color */
+    line-height: 1.5;        /* Improved readability */
+    
+}
+/* Styling for the container of each note */
+.note-box {
+    background-color: #f9f9f9; /* Light gray background */
+    border: 1px solid #ddd;   /* Subtle border */
+    border-radius: 8px;       /* Rounded corners */
+    padding: 16px;            /* Internal spacing */
+    margin-bottom: 16px;      /* Space between note-boxes */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth hover effect */
+}
+
+.note-box:hover {
+    transform: translateY(-4px); /* Lift effect on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+/* Styling for the note name (student's name) */
+.note-name {
+    font-size: 1.25em;        /* Slightly larger font for emphasis */
+    font-weight: bold;        /* Make it stand out */
+    color: #333;              /* Dark gray color for readability */
+    margin: 0 0 8px;          /* Space below the name */
+}
+
+/* Styling for the note (grade) */
+.note-note {
+    font-size: 1em;           /* Default font size */
+    color: #555;              /* Medium gray for less emphasis */
+    margin: 0;                /* Remove default margins */
+}
+.section-title {
+    font-size: 1.5em;         /* Adjust font size */
+    color: #2c3e50;          /* Dark blue-gray color */
+    font-weight: bold;       /* Bold text */
+    text-transform: uppercase; /* Uppercase text */
+    margin-bottom: 5px;     /* Space below the title */
+    margin-top: 25px;
+    border-bottom: 2px solid #e74c3c; /* Add an underline effect */
+    padding-bottom: 5px;     /* Padding below the text */
 }

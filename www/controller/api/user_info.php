@@ -17,7 +17,7 @@ if (isset($_SESSION['user_id'])) {
     }
         $row = mysqli_fetch_assoc($result);
         if ( !$row){
-            header('location: /pages/user/user_page.php?error=1');
+            header('location: /pages/user/user_page.php?error=1&id='.$user_id);
         }
         $user_info = array(
             "nom" => $row['nom'],

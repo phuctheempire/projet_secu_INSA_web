@@ -13,16 +13,16 @@ require ROOT_PATH . DS . "components" . DS . "nav_bar.php";
             <h2 class="form-title">Register</h2> <!-- Added a title for the form -->
             
             <div class="form-group">
-                <input type="text" name="nom" placeholder="Nom" value="<?php echo htmlspecialchars($nom); ?>"
+                <input type="text" name="nom" placeholder="Nom" 
                     class="form-input" id="nom" required>
             </div>
             <div class="form-group">
-                <input type="text" name="prenom" placeholder="Prenom" value="<?php echo htmlspecialchars($prenom); ?>"
+                <input type="text" name="prenom" placeholder="Prenom" 
                     class="form-input" id="prenom" required>
             </div>
             <div class="form-group">
                 <input type="text" name="email" placeholder="Email"
-                    value="<?php echo htmlspecialchars($email); ?>" class="form-input" id="email" required>
+                     class="form-input" id="email" required>
             </div>
             <div class="form-group">
                 <label for="departement">Select Department:</label>
@@ -47,12 +47,12 @@ require ROOT_PATH . DS . "components" . DS . "nav_bar.php";
             </div>
 
             <div class="form-group">
-                <input type="text" name="adresse" placeholder="Adresse" value="<?php echo htmlspecialchars($adresse); ?>"
+                <input type="text" name="adresse" placeholder="Adresse" 
                     class="form-input" id="adresse" required>
             </div>
 
             <div class="form-group">
-                <input type="tel" name="telephone" placeholder="Telephone" value="<?php echo htmlspecialchars($telephone); ?>"
+                <input type="tel" name="telephone" placeholder="Telephone" 
                     class="form-input" id="telephone" required>
             </div>
 

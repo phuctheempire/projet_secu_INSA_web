@@ -19,6 +19,7 @@ require ROOT_PATH . DS . "components" . DS . "nav_bar.php";
                     <textarea class="form-textarea" name="content" id="content" cols="30" rows="10"><?php echo $annonce_info['content']; ?></textarea>
                 </div>
                 <button type="submit" class="btn-submit" name="mod_annonce">Sauvegarder</button>
+                <button type="submit" class="btn-delete" name="del_annonce">Supprimmer</button>
         </div>
     </div>
 </body>
