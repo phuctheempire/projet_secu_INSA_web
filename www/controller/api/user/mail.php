@@ -7,6 +7,8 @@ if (isset($_SESSION['user_id'])){
     if ($user_id == $_SESSION['user_id']){
         $email_list = getAllMailsByID($user_id);
     }
+}else {
+    header('location: /pages/public/login.php');
 }
 if (isset($_POST['send_email'])){
     $receiver_emails = $_POST['receiver_emails'];

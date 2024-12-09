@@ -19,7 +19,7 @@ require ROOT_PATH . DS . "components" . DS . "nav_bar.php";
                             // var_dump($_SESSION['user_id'], $_GET['cours_id'])
                             ?>
                             <a href="annonce_edit.php?annonce_id=<?php echo $annonce["annon_id"] ?>" class="btn-modify">Modifier annonce</a> 
-                        <?php } ?>
+                            <?php } ?>
                         
                     </div>
                 </a>

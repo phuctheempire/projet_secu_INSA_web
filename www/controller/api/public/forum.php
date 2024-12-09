@@ -9,5 +9,4 @@ if(!isset($_GET["recherche"])) {
     }
 } else {
         $posts = get_result_by_recherche($_GET['recherche']);
-
 }

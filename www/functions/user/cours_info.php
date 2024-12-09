@@ -9,7 +9,6 @@ function getAnnonce( $cours_id){
         $annonces[] = $row;
     }
     // var_dump($annonces);
-    mysqli_close($conn);
     return $annonces;
 }
 
@@ -22,7 +21,6 @@ function getDocuments( $cours_id){
         $documents[] = $row;
     }
     
-    mysqli_close($conn);
     return $documents;
 }
 
