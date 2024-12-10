@@ -22,4 +22,15 @@ GRANT SELECT, INSERT, UPDATE, DELETE ON `insa_db`.`Posts` TO `user1`@`%`;
 GRANT SELECT, INSERT, UPDATE, DELETE ON `insa_db`.`Cours_info` TO `user1`@`%`;
 
 GRANT SELECT, INSERT, UPDATE, DELETE ON `insa_db`.`Users` TO `user1`@`%`;
+
+
+CREATE USER 'user1'@'%' IDENTIFIED BY 'user1';
+
+
+GRANT SELECT, INSERT, UPDATE, DELETE ON `insa_db`.`Posts` TO 'user1'@'%';
+GRANT SELECT, INSERT, UPDATE, DELETE ON `insa_db`.`Cours_info` TO 'user1'@'%';
+GRANT SELECT, INSERT, UPDATE, DELETE ON `insa_db`.`Users` TO 'user1'@'%';
+
+
+FLUSH PRIVILEGES;
 ```
