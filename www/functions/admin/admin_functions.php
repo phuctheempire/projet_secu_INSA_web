@@ -16,7 +16,7 @@ function getUserInfo($user_id) {
         "image_path" => $row['image_path'],
         "role" => $row['role']
     );
-    mysqli_close($conn);
+    
     return $user_info;
 }
 
@@ -198,7 +198,7 @@ function change_email($user_id, $new_email) {
         $message = "Erreur lors du changement d'email : " . mysqli_error($conn);
     }
 
-    mysqli_close($conn);
+    
     return $message;
 }
 

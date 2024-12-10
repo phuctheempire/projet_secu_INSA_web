@@ -9,7 +9,6 @@ function getCoursList() {
     while ($row = mysqli_fetch_assoc($result)) {
         array_push($courses, $row);
     }
-    mysqli_close($conn);
     return $courses;
 }
 

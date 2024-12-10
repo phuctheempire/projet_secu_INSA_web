@@ -9,7 +9,6 @@ function get_all_posts()
     while ($row = mysqli_fetch_assoc($result)) {
         array_push($posts, $row);
     }
-    mysqli_close($conn);
     return $posts;
 }
 
