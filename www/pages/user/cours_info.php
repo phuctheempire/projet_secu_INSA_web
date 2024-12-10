@@ -24,7 +24,11 @@ require ROOT_PATH . DS . "components" . DS . "nav_bar.php";
                     </div>
                 </a>
                 <?php } ?>
+                <?php if ( $_SESSION['user_role'] == 'Professor' and is_professeur($_SESSION['user_id'],$_GET['cours_id'])){ 
+                            // var_dump($_SESSION['user_id'], $_GET['cours_id'])
+                            ?>
                 <a href="annonce_add.php?cours_id=<?php echo $_GET['cours_id']?>" class="btn-modify">Ajoute un annonce</a>
+                <?php } ?>
             <?php if ( $_SESSION['user_role'] == 'Professor' and is_professeur($_SESSION['user_id'],$_GET['cours_id'])){ 
                             // var_dump($_SESSION['user_id'], $_GET['cours_id'])
                             ?>
