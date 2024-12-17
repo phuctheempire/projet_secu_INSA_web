@@ -28,12 +28,12 @@ require ROOT_PATH . DS . "components" . DS . "nav_bar.php";
                     </a>
                 <?php } ?>
         </div>
-        <div class="change-email-form">
+        <!-- <div class="change-email-form">
             <h2>Changer mon adresse email</h2>
             <form method="GET" action="">
                 <input type="email" name="new_email" placeholder="Nouvelle adresse email" required>
                 <button type="submit" name="change_email">Changer l'email</button>
             </form>
-        </div>
+        </div> -->
     </div>
 </body>

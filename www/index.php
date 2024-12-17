@@ -6,7 +6,7 @@ include "components".DS."header.php";
 <body>
     <?php require "components".DS."nav_bar.php"; ?>
     <div class="container">
-    <?php echo "<h1>Test database</h1>"; ?>
+    <!-- <?php echo "<h1>Test database</h1>"; ?>
 
     <?php
 
@@ -48,7 +48,7 @@ include "components".DS."header.php";
         } else {
             var_dump("Error uploading file") ;
         }
-    ?>
+    ?> -->
     
     </div>
 </body>
