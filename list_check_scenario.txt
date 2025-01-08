@@ -1,0 +1,7 @@
+Faire simulation utilisateurs:
+--> Finir check_CSRF.sh
+--> Faire:
+-check_Idor.sh
+-check_SQL_injection.sh
+-check_XSS.sh
+-check_Injection_bash.sh
