@@ -27,5 +27,10 @@ USER_ID=$(echo "$CLEAN_REDIRECT_URL" | grep -oP 'id=\K\d+')
 echo "$PHPSESSID" > session_info.txt
 echo "$USER_ID" >> session_info.txt
 
-echo "Login successful. PHPSESSID: $PHPSESSID, USER_ID: $USER_ID"
-echo "Session info saved to session_info.txt"
+# Check if PHPSESSID or USER_ID are empty
+if [[ -z "$PHPSESSID" || -z "$USER_ID" ]]; then
+    echo "Login failed. PHPSESSID or USER_ID is empty."
+else
+    echo "Login successful. PHPSESSID: $PHPSESSID, USER_ID: $USER_ID"
+    echo "Session info saved to session_info.txt"
+fi
