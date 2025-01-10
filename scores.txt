@@ -1,0 +1,4 @@
+Total Score: 100
+Current Score: 30
+Question: you are a kitten
+Answer: fine thanks and you
