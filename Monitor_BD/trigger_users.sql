@@ -3,7 +3,7 @@ CREATE TRIGGER after_insert_users
 AFTER INSERT ON Users
 FOR EACH ROW
 BEGIN
-    INSERT INTO Log (operation_type, table_name, row_id, new_values)
+    INSERT INTO Log_users (operation_type, table_name, row_id, new_values)
     VALUES (
         'INSERT',
         'Users',
