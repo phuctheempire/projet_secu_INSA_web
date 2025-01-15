@@ -1,4 +1,4 @@
-CREATE TABLE Log (
+CREATE TABLE Log_Users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     operation_type VARCHAR(10), -- Type de l'opération (INSERT, UPDATE, DELETE)
     table_name VARCHAR(50),    -- Nom de la table (ici "Users")
