@@ -66,7 +66,7 @@ CREATE TABLE IF NOT EXISTS Users (
     adresse VARCHAR(255) NOT NULL,
     telephone VARCHAR(255) NOT NULL,
     image_path VARCHAR(255),
-    role ENUM('Student', "Professor") NOT NULL
+    role ENUM('Student', "Professor", "Admin") NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS Students (
@@ -309,6 +309,7 @@ CALL insert_professor(
     'STI'
 );
 
+
 CALL init_groupes();
 
 
@@ -318,3 +319,8 @@ CALL insert_matiere('Programmation Web');
 
 
 ```
+
+```
+
+INSERT INTO Users (email, password, nom, prenom, sexe, date_naissance, adresse, telephone, image_path, role) 
+VALUES ('admin@insa-cvl.fr', 'admin', 'Admin', 'Admin', 'M', '2000-01-01', "INSA CVL", "0123456789", "Admin.img", 'Admin');

