@@ -45,10 +45,10 @@ function add_annonce($annonce){
 
 function remove_annonce($annonce_id){
     global $conn;
-    $query = "DELETE FROM `Annoncement` WHERE annon_id = $annonce_id;";
-    $result = mysqli_query($conn, $query);
     $query2 = "DELETE FROM `Comments` WHERE annon_id = $annonce_id;";
     $result2 = mysqli_query($conn, $query2);
+    $query = "DELETE FROM `Annoncement` WHERE annon_id = $annonce_id;";
+    $result = mysqli_query($conn, $query);
     return ($result);
 }
 
