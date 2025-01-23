@@ -1,3 +1,7 @@
+<?php
+require_once ROOT_PATH . DS . "components" . DS . "scorebar.php";
+?>
+
 <div id="navbar">
     <a id="a-link-header" href="/">
         <img src="https://www.aefinfo.fr/assets/medias/documents/4/4/448703_prv.jpeg" alt="School Icon" id="school-icon">

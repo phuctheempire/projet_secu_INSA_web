@@ -941,3 +941,16 @@ h2, p {
     border-bottom: 2px solid #e74c3c; /* Add an underline effect */
     padding-bottom: 5px;     /* Padding below the text */
 }
+
+        .score-bar-container {
+            width: 100%;
+            background-color: #e0e0e0;
+            height: 20px; /* Height of the bar */
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        /* Actual score bar */
+        .score-bar {
+
+        }
